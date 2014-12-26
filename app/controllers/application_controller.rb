@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-before_filter :getPageNav, :getJumbotron, :getBlocks
+before_filter :getPageNav, :getJumbotron, :getAllblocks
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -13,7 +13,7 @@ before_filter :getPageNav, :getJumbotron, :getBlocks
   	@jumbotron = Block.where("position = 'jumbotron'")
   end
 
-  def getBlocks
+  def getAllblocks
   	@blocks = Block.where("position = 'block'").order(order: :asc)
   end
 
