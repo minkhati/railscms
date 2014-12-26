@@ -1,5 +1,5 @@
-<% if @blocks.exists? %>
-  <% @blocks.each_slice(3) do |block| %>
+<% if @blockers.exists? %>
+  <% @blockers.each_slice(3) do |block| %>
     <div class="row">
       <% block.each do |block| %>
         <% if params[:controller] == 'home' %>
